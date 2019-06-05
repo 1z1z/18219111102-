@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="dashboard.css" rel="stylesheet">
+    <script type="text/javascript"src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <title> 家乡推荐</title>
+    
+  
+    <style>
+        #summary-container.col-md-4{
+          text-align:center
+        }
+        hr.divider{
+          margin:40px 0;
+        }
+        .feature{
+          padding:30px 0;
+        }
+        .feature-heading{
+          font-size:50px;
+          color: #2a6496;
+      margin-top:120px;
+        }
+        .feature-heading .text-muted{
+          font-size:28px;
+          color:#999;
+        }
+      </style>
+<style>
+  .carousel{
+    height:500px;
+    background-color:#000;
+  }
+  .carousel .item{
+    height:500px;
+    background-color:#000;
+  }
+  .carousel.img{
+    width:100%;height: 100%;
+  }
+.carousel-caption p{
+  margin-bottom:20px;
+  font-family:"宋体";
+}
+</style>         
+<style>
+.lead{
+  font-family: "宋体";
+  font-size: medium;
+}
+</style>
+
+ </head>
+ <body onload="scrollTo(0,9)">
+    <nav class="navbar navbar">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="家乡推荐（总）.html">家乡推荐</a>
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="乡土文化.html" target="_blank">乡土文化<span class="sr-only">(current)</span></a></li>
+              <li><a href="地理位置.html" target="_blank">地理位置</a></li>
+              <li class="dropdown">
+                <a href="景点推荐.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">景点推荐<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="景点推荐.html" target="_blank">景点推荐（总）</a></li>
+                    <li role="separator" class="divider"></li>
+                  <li><a href="https://baike.so.com/doc/5373246-5609219.html" target="_blank">仙都景区</a></li>
+                  <li><a href="https://www.iqiyi.com/w_19rsr309wp.html" target="_blank">览川花海</a></li>
+                  <li><a href="https://baike.so.com/doc/28115221-29525897.html" target="_blank">蛟坑峡谷</a></li>
+                  <li><a href="https://baike.so.com/doc/6695621-6909531.html" target="_blank">大洋水库</a></li>
+                  <li><a href="http://www.zjwclw.cn/zdxx/twjs/view.jsp?id=38396&lmid=1000000&zdid=10635" target="_blank">上坪天桥</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="https://you.ctrip.com/travels/lishui441/2299460.html" target="_blank">献山庙</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">查找</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="乡土文化.html" target="_blank">乡土文化</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">景点推荐 <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://baike.so.com/doc/5373246-5609219.html" target="_blank">仙都景区</a></li>
+                    <li><a href="https://www.iqiyi.com/w_19rsr309wp.html" target="_blank">览川花海</a></li>
+                    <li><a href="https://baike.so.com/doc/6695621-6909531.html" target="_blank">大洋水库</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="https://baike.so.com/doc/28115221-29525897.html" target="_blank">蛟坑峡谷</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+   
+<div id="carousel-example-generic"class="carousel slide"data-ride="carousel">
+ <!--...的导航-->
+  <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  <li data-target="#carousel-example-generic"data-slide-to="2"></li>
+  </ol>
+  <!--轮播组件的内容-->
+  <div class="carousel-inner" role="listbox"hight:450px>
+      <div class="item active">
+    <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1985409969,3268088610&fm=26&gp=0.jpg"alt="4 slide"width="100%"height="auto">
+    <div class="carousel-caption">仙之境，梦之约，心之旅  </div>
+  </div>
+<div class="item">
+  <img src="http://5b0988e595225.cdn.sohucs.com/images/20181010/fcfac59f6c824b73b2a551f4554ffff3.jpeg"alt="4 slide"width="100%"height="auto">
+  <div class="carousel-caption">花花世界,美丽笕川</div>
+</div>
+<div class="item">
+  <img src="https://dimg01.c-ctrip.com/images/tg/984/794/558/960d053120d6452ead9daa14da6fef3a_C_640_10000.jpg"alt="4 slide"width="100%"height="auto">
+  <div class="carousel-caption">石韵乡愁 洋上箬川</div>
+</div>
+<!-- 左右切换的按钮-->
+<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="src-only">Previous</span>
+   </a>
+   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="src-only">Next</span>
+   </a>
+  </div>
+
+  
+
+
+     <!--标签页制作-->
+     <hr class="divider">  
+<ul class="nav nav-tabs"role="tablist">
+<li class="active"><a href="#tab-a"role="tab"data-toggle="tab">仙都风景</a></li>  
+<li><a href="#tab-b"role="tab"data-toggle="tab">览川花海</a></li>
+<li><a href="#tab-c"role="tab"data-toggle="tab">蛟坑峡谷</a></li>
+<li><a href="#tab-d"role="tab"data-toggle="tab">大洋水库</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active"id="tab-a">
+    <div class="row feature">
+      <div class="col-md-7">
+         <h2 class="feature-heading">仙都风景<span class="text-muted">仙之境，梦之约，心之旅 </span></h2>
+         <p class="lead">仙都位于浙江省丽水地区缙云县境内，是一处以峰岩奇绝、山水神秀为景观特色，融田园风光与人文史迹为一体，以观光、避暑休闲和开展科学文化活动为一体的国家级重点风景名胜区；亦是一个山明水秀、景物优美、气候宜人的游览胜地。境内九曲练溪，十里画廊，山水飘逸，云雾缭绕。 相传在唐天宝年间有许多缤纷彩云回旋于此山，山谷乐声震天，山林增辉。当时有刺史苗奉倩上报玄宗。玄宗听后惊叹地说：“这是仙人荟萃之都也！”并亲自写下“仙都”二字。仙都景色美在天然，奇峰异石，千姿百态；她有桂林山水之秀又有雁荡奇峰怪石之神韵。 仙都山，古称“缙云山”，与黄山、庐山并列为轩辕黄帝的三大行宫――三天子都之一道教典籍称仙都为玄都祈仙洞天，属三十六小洞天之第二十九。仙都道教兴盛，佛教发达，景区内建有黄帝祠宇（玉虚宫）、黄龙寺、栖真寺、妙庭观、缙云堂、南宫寺、乌伤侯庙、独峰书院等人文古建筑，其中“黄帝祠宇”规模最大，是炎黄子孙祭祀朝拜中华民族始祖的圣地。</p></div>
+       <div class="col-md-5">
+      <img src="http://img.pconline.com.cn/images/upload/upc/tx/itbbs/1505/05/c54/6379243_1430814192777_mthumb.jpg"alt="home"width="450"hight="800"style="margin-top:70px"></div>
+     </div>
+   </div>
+
+  <div class="tab-pane"id="tab-b">
+   <div class="row feature">
+    <div class="col-md-5">
+      <img src="http://img2.zjolcdn.com/pic/0/17/67/84/17678424_916063.jpg"alt="览川花海"width="450"hight="800"style="margin-top:40px"></div>
+      <div class="col-md-7"><h2 class="feature-heading">  览川花海  <span class="text-muted">花花世界，美丽览川</span></h2>
+      <p class="lead">笕川花海位于缙云县新建镇笕川村，高铁、高速穿村而过，占地面积600亩。“花海”品种繁多，保证四季有景，并辅以全省第一条“环花海”观光小火车，供大家乘坐游览。一山一石，一花一木，一桥一舍，唤起你对儿时古居美丽家乡的留恋! 牵动你与亲朋相聚时的团圆记忆!远方的你，如果刚好乘坐高铁经过缙云，不经意间透过车窗望见眼前高空下的盛景，被惊艳的内心是否想过为之停留？归期有期，行至景区出入口处，水塘边那家黑瓦白墙还有马头墙的“丁家小院”，宛若江南女子般的秀外慧中，既是笕川村近年来从“五水共治”再出发美丽蜕变的缩影，更见证和感受着这个仰俯间看见花草树木与山川河流的缙云西乡村庄从美丽乡村向美丽经济提升的完美对接。 </p>
+     </div>    
+    </div>
+  </div>
+
+  <div class="tab-pane"id="tab-c">
+    <div class="row feature">
+      <div class="col-md-7">
+        <img src="http://d.ifengimg.com/w600/p0.ifengimg.com/pmop/2018/1029/FFCE2B50B4952BE6016C2E881706022C5EEB6E4E_size213_w1080_h810.jpeg"alt="蛟坑峡谷"width="450"hight="1000"style="margin-top:40px"></div>
+        <div class="col-md-5"> <h2 class="feature-heading">蛟坑峡谷<span class="text-muted">铁骨铮铮撼九乾</span></h2>
+        <p class="lead">蛟坑坑之西屋柱岭：高崖壁立:为大小两重三角崖组成，直插云空，有南岳天柱山之雄。顶插红旗，是缙云驴道标志。峰后层峦叠嶂，势更伟峻，为古今闻名的古方山。山中有三国赤乌古方塘，人云它与金华胡海塘、永康大易塘齐名；古方山更是为五千年前中华民族人文始祖轩辕黄帝嫘祖、方雷二妃氏族之圣山。坑之东有两峰，前后相依，巍然直立：前者秀巧奇绝，当北海洞山，亦可称金鸡峰，也可名凤凰岩；后者雄壮，名石迎山，俗称鸡笼岩，从整体而言又当属石牛山。坑西坑东，两大山岭在此对峙，势成天阙。</p>
+       </div>
+     </div>  
+  </div>
+  <div class="tab-pane"id="tab-d">
+    <div class="row feature">
+      <div class="col-md-5">
+        <img src="https://p0.ssl.qhimgs1.com/bdr/540__/t017c274e352aa778b4.jpg"alt="大洋水库"width="450"hight="800"style="margin-top:40px"></div>
+        <div class="col-md-7"><h2 class="feature-heading">大洋水库<span class="text-muted">仙恋高山生态地，人醉大洋桃花源</span></h2>
+        <p class="lead">大洋水库(又名大洋湖)，位于浙江省丽水市缙云县大洋镇西五公里的深山峡谷间。该水库于上世纪七十年代建成，是缙云人民自力更生，艰苦创业精神的结晶。库下沿盘溪水建有六个梯级电站。一九七九年由四十多个国家和地区的世界小水电会议在此召开，受到与会专家的高度评价。大洋水库在大洋山的群峰峡谷之间，湖水清澈见底，游鱼可见，水波粼粼，时有野鸭出没。茶花红、青松绿，湖光山色，人们似乎处在九天瑶池之中。</p>
+      </div>
+    </div>  
+  </div>
+</div>
+
+<hr style="height:10px ">
+<!--类似微博用户发言界面-->
+
+<section >
+  <div class="row"width="100%">
+    <div class="col-md-9">
+    <h2 style="font-size: 25px"><a href="http://www.zjwh.gov.cn/dtxx/zjwh/2017-03-01/209065.htm">缙云非物质文化遗产</a></h2>
+    <a href="http://www.zjwh.gov.cn/dtxx/zjwh/2017-03-01/209065.htm" target="_blank" style="float:right">更多>></a>   
+  </div></div>
+<hr style="height:10px;margin-top: 10px ">
+<div class="demo01"style="width:85%;position: relative;overflow: hidden;margin-top:40px">
+  <div class="left"style="width:100px;float: left">
+  <img src="http://s6.sinaimg.cn/mw690/0016huqMgy6Wdi3Xyw5a5"style="margin-left: 20px"width="120"height="120">
+  <span>黄帝文化</span>
+  </div>
+  <div class="right"style="width:85%;padding:30px;float: right;background-color:#ccffff;border: 1px solid#ccc">
+  <p style="font-size: 12px;line-height: 25px">黄帝祠宇，是国家级风景名胜区——仙都最主要的人文景观。黄帝祠宇始建于东晋，为历朝历代寻根祭祖场所，与陕西省黄帝陵并称“北陵南祠”。唐万岁登封元年(公元696年)，武则天以轩辕黄帝名号为县名，诏令置缙云县。唐天宝年间，唐玄宗李隆基闻奏曰：“真乃仙人荟萃之都也”，并御书“仙都”两字，仙都因此而得名。仙都祭祀轩辕黄帝历史悠久，是中国南方黄帝祭祀中心和黄帝文化辐射中心。早在夏商周时期，当地百姓就将鼎湖峰作为始祖轩辕黄帝来顶礼祭拜。唐天宝七年，唐玄宗李隆基赐改缙云山为仙都山、缙云堂为黄帝祠宇，从此黄帝祠宇与陕西黄帝陵形成“北陵南祠”的格局。仙都祭祀轩辕黄帝大典是经党中央、国务院批准保留的浙江省三大祭典活动之一，吸引了海内外华人纷纷前来寻根祭祖。2011年5月份，缙云轩辕祭典成功入选第三批国家级非物质文化遗产名录。目前，缙云仙都“黄帝飞升地”已与陕西黄陵黄帝墓葬地、河南新郑黄帝出生地形成“三地”共祭格局，成为炎黄子孙宣示“民族认同、血脉认同、文化认同”的精神高地。</p>
+  </div>
+  </div>
+  <br/>
+  <div class="demo02"style="width:85%;position: relative;overflow: hidden">
+    <div class="left"style="width:100px;float: left">
+    <img src="https://p1.ssl.qhmsg.com/dr/270_500_/t01c5703b2a34eb93ea.jpg"style="margin-left: 20px;margin-right:20px"width="120"height="120">
+    <span> 缙云迎罗汉</span>
+  
+    </div>
+    <div class="right"style="width:85%;padding:30px;float: right;background-color: #ffffcc;border: 1px solid#ccc">
+    <p style="font-size: 12px;line-height: 25px">迎罗汉由一个或多个罗汉班参加，每班数十人到上百余人不等。各班在开演前都要在本村举行庄重地祭旗仪式，然后在指定地点集结，按照约定的路线，在阵头旗、神幡的带领下，伴随着先锋、锣鼓声以一字长蛇阵进行踩街，每到一村都会选择一处宽阔场地轮番表演，其形式主要有罗汉阵、耍武、叠罗汉等。</p>
+    </div>
+    </div>
+    <div class="demo03"style="width:85%;position: relative;margin-top:20px">
+      <div class="left"style="width:100px;float: left">
+      <img src="http://h2.bytravel.cn/shop/head3/43552.gif"style="margin-left: 20px"width="120"height="120">
+      <span>上宕功夫</span>
+    
+      </div>
+      <div class="right"style="width:85%;padding:30px;float: right;background-color: #ffccff;border: 1px solid#ccc;">
+      <p style="font-size: 12px;line-height: 25px">上宕功夫因地而得名，上宕村位于缙云县东部。据明永乐《五云有时氏宗谱》记载：自缙云胡氏始祖迁祖胡森公，为宋朝东南第一正将。第三代太公胡渊为宋武节大夫，镇守河南，战功卓著，誉播乡里，朝廷曾授予“护国功臣”大匾。胡渊告老还乡以后立下族规，要求后代人人习武，代代相传。上宕功夫所使用的器械，为硬木棍，一般竖放时与人眉毛等高，称“齐眉棍”。上宕功夫的棍法种类繁多，有“一枝香”、“手连步”、“头路”、“二路”、“七连步”等，其中以“一支香”最为有名，棍路招式多变，攻守自如，成为该村的看家绝活。上宕人为深得“一支香”精髓，使功夫达到炉火纯青的地步，等熟练后，要在夜间关灯演习。演习时，在中堂点上一柱佛香，置与膝盖齐高处，当练到第18式时，以将香火捅灭，以不伤香杆才算练好，“一支香”名称也由此而来。</p>
+      </div>
+      </div>
+</div></div></section>
+
+
+<!--响应式表格-->
+ <div class="form-group"style="margin-top:1430px" >
+  <div class="jumbotron text-center">       
+          <table class="table table-striped table-bordered table-hover table-condensed">  
+             <!--     .table-striped 在 <tbody> 内添加斑马线形式的条纹 ( IE8 不支持)     .table-bordered 为所有表格的单元格添加边框     .table-hover 在 <tbody> 内的任一行启用鼠标悬停状态     .table-condensed 让表格更加紧凑    -->  
+                 <thead>  <h4 style="text-align: center">缙云旅游攻略导航</h4> 
+                     <tr class="active">   
+                 <th>类别</th>  
+                    <th>内容</th>   
+                    </tr>   
+                   </thead> 
+                      <tbody>   
+                          <tr class="success">
+                              <td>风景名胜</td>  
+                               <td> <li ><a href="http://you.ctrip.com/sight/jinyun1021/8535.html" target="_blank">童子峰</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8528.html" target="_blank">百丈三潭</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/56346.html" target="_blank">河阳古民居</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/143893.html" target="_blank">岱石村</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/56296.html" target="_blank">仰止亭</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8544.html" target="_blank">黄帝祠宇</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/56283.html" target="_blank">黄龙寺</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8530.html" target="_blank">大肚岩</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8518.html" target="_blank">大洋水库</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/1511339.html" target="_blank">公济桥</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/56320.html" target="_blank">赵侯祠</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/56279.html" target="_blank">黄龙景区</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/1510851.html" target="_blank">云英谷</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/56308.html" target="_blank">舅轿岩</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8524.html" target="_blank">狮子山</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8529.html" target="_blank">小蓬莱</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/56274.html" target="_blank">岩门景区</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/2476577.html" target="_blank">天门坪漂流</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8543.html" target="_blank">凌虚洞</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/56298.html" target="_blank">轩辕黄帝史迹展览馆</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8557.html" target="_blank">步虚亭</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/1510886.html" target="_blank">缙云博物馆</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8556.html" target="_blank">步虚山</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/56312.html" target="_blank">袁枚《游仙都峰记》刻石</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8466.html" target="_blank">小赤壁</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8517.html" target="_blank">弹子潭</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8444.html" target="_blank">神女峰</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8548.html" target="_blank">沈括摩崖题刻</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/8453.html" target="_blank">花岩</a></li>
+                                <li style="float:left"><a href="http://you.ctrip.com/sight/jinyun1021/1510831.html" target="_blank">姑妇岩</a></li></ul></td> 
+                                      </tr>     <tr>   
+                                          <td>特色小吃</td>   
+                                            <td><li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/14943602.html" target="_blank">1号面馆</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/14037352.html" target="_blank">梦都农家大院</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13647822.html" target="_blank">红果粒</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13637307.html" target="_blank">九泷漟</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13662860.html" target="_blank">十八坊</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13755609.html" target="_blank">Miss Cake私家烘焙坊</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13569970.html" target="_blank">星期六追鱼</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13544147.html" target="_blank">小馋猫</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/15159430.html" target="_blank">开心花甲</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13499186.html" target="_blank">祥明阳澄湖大闸蟹</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13979918.html" target="_blank">壶镇烧烤</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/15157207.html" target="_blank">丸来玩趣</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13597031.html" target="_blank">鼎炫瘦肉丸</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13541642.html" target="_blank">麻式手工水饺</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/15318263.html" target="_blank">源点蛋糕</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13631018.html" target="_blank">可心私房烘焙</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13944976.html" target="_blank">开碗笑美食</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13585482.html" target="_blank">重庆石锅鱼</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13737821.html" target="_blank">一家人小吃</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13450448.html" target="_blank">鲜果粒</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13551712.html" target="_blank">刘家铺子农家乐</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13587448.html" target="_blank">大唐酒家</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13571519.html" target="_blank">花园饭店</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/15155455.html" target="_blank">绝色烤鱼(新区店)</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/15159693.html" target="_blank">小美家鲜榨果汁</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/15158684.html" target="_blank">大蜜旺(缙云店)</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13943489.html" target="_blank">印象韩式美食</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13819737.html" target="_blank">大城小厨</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13439555.html" target="_blank">绿野人家</a></li>
+                                              <li style="float:left"><a href="http://you.ctrip.com/food/jinyun1021/13828752.html" target="_blank">蓬莱海鲜烧烤</a></li></td>   
+                                            </tr>  
+                                               <tr class="warning"> 
+                                                     <td>文化历史</td>    
+                                                      <td>      <li><a href="https://gs.ctrip.com/html5/you/sight/1021/8535.html" target="_blank">童子峰</a></li>
+                                                        <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8528.html" target="_blank">百丈三潭</a></li>
+                                                        <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/56346.html" target="_blank">河阳古民居</a></li>
+                                                        <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/143893.html" target="_blank">岱石村</a></li>
+                                                        <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/56296.html" target="_blank">仰止亭</a></li>
+                                                        <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8544.html" target="_blank">黄帝祠宇</a></li>
+                                                        <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/56283.html" target="_blank">黄龙寺</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8530.html" target="_blank">大肚岩</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8518.html" target="_blank">大洋水库</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/1511339.html" target="_blank">公济桥</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/56320.html" target="_blank">赵侯祠</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/56279.html" target="_blank">黄龙景区</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/1510851.html" target="_blank">云英谷</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/56308.html" target="_blank">舅轿岩</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8524.html" target="_blank">狮子山</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8529.html" target="_blank">小蓬莱</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/56274.html" target="_blank">岩门景区</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/2476577.html" target="_blank">天门坪漂流</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8543.html" target="_blank">凌虚洞</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/56298.html" target="_blank">轩辕黄帝史迹展览馆</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8557.html" target="_blank">步虚亭</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/1510886.html" target="_blank">缙云博物馆</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8556.html" target="_blank">步虚山</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/56312.html" target="_blank">袁枚《游仙都峰记》刻石</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8466.html" target="_blank">小赤壁</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8517.html" target="_blank">弹子潭</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8444.html" target="_blank">神女峰</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8548.html" target="_blank">沈括摩崖题刻</a></li>
+                                                          <li style="float:left"><a href="https://gs.ctrip.com/html5/you/sight/1021/8453.html" target="_blank">花岩</a></li>
+                                                          <li style="float:left"s><a href="https://gs.ctrip.com/html5/you/sight/1021/1510831.html" target="_blank">姑妇岩</a></li></ul></td>   
+                                                      </tr>   
+  
+                                                            <!--     .active 对某一特定的行或单元格应用悬停颜色；.success表示一个成功的或积极的动作；     .warning 表示一个需要注意的警告；.danger 表示一个危险的或潜在的负面动作；    -->     
+                                                                </tbody>  
+                                                                </table>   
+   </div> </div>
+   
+
+
+<hr>
+
+<!--相关推荐-->
+
+<div class="row">
+    <div class="col-md-6" id="rs" data-ext="eci=ac099ad0fcfef26f&nlpv=rel_c_test_11_lyj">
+        <h3 style="margin-left:15%">相关搜索<span class="so_feedback">| 
+          <a href="http://www.so.com/link?m=aXdJdBagdrTqRKbipu79uZG8RiJMmSwpQlsGR8vMyN%2BXlkl%2FEZuiyFxexnCUWiU9tliD3szNydL0qpmb0dVvtCOMGIaPAIfizJnE86BnjF6OOSDSO3JlEi3g6ssPtMTJPrNHx5hioKagrnLiG" data-url="http://info.so.com/feedback.html" target="_blank" class="feedback3">反馈</a></span></h3>
+        <table style="margin-left:20%">
+          <tr><td height="30px"width="120"><a href="http://trip.elong.com/jinyun/" >旅游攻略（艺龙）</a></td>
+          <td height="30px"width="120"><a href="https://baike.so.com/doc/6142998-6356172.html" >文化研究  </a></td>
+          <td height="30px"width="120"><a href="http://www.jinyun.gov.cn/" >政府网   </a></td>
+          <td height="30px"width="120"> <a href="http://www.zjfeiyi.cn/news/detail/31-14038.html" >非物质文化遗产网</a></td></tr>
+
+           <tr><td height="30px"><a href="http://jynews.zjol.com.cn/jynews/rwjy/" >人文缙云  </a></td>
+          <td height="30px"><a href="https://ditu.so.com/?t=map&src=onebox&new=1&dspall=0&k=浙江省缙云县&c=丽水市" >缙云地图  </a></td>
+          <td height="30px"><a href="https://baike.so.com/doc/2884894-3044436.html" >缙云烧饼  </a></td>
+           <td height="30px"><a href="https://zhejiang.cncn.com/meishi/" >美食推荐  </a></tr>
+
+            <tr><td height="30px"><a href="http://www.jyart.com.cn/" >文化馆   </a></td>
+            <td height="30px"><a href="https://zj.zjol.com.cn/news/998758.html" > 黄帝缙云 </a> </td>
+            <td height="30px"><a href="http://www.zjjyedu.org/index.aspx" >缙云教育网 </a></td>
+             <td height="30px"><a href="https://tianqi.so.com/weather/101210804" >天气预报  </a></td></tr>
+
+             <tr><td height="30px"><a href="http://www.xiandu.gov.cn/" >仙都旅游网 </a></td>
+              <td height="30px"><a href="http://ct.zj.gov.cn/" >浙江旅游网 </a></td>
+              <td height="30px"><a href="https://mkt.51job.com/tg/sem/logo_v1.html?from=360ad" >人才网   </a></td>
+              <td height="30px"><a href="http://yx2.zgu5o.cn/" >缙云游戏中心 </a></td> </tr>
+               
+        </table> 
+    </div>
+        <form class="col-md-6"id="form-signin"style="float:right">
+            <h2 class="form-signin-heading">意见反馈</h2>
+            <label for="inputEmail" class="sr-only">邮箱地址</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="联系地址" required autofocus>
+            <label for="inputPassword" class="sr-only">详细建议</label>
+            <input type="text" id="inputPassword" class="form-control" placeholder="输入建议" required>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="remember-me"> 是否匿名
+              </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">点击提交</button>
+          </form> 
+</div>
+      <!--底部-->
+<div id="footer"style="margin-top:20px">
+        <div class="row">
+            <div class="col-sm-12"style="margin-left:30%;margin-top:20px">
+    <a href="http://www.so.com/link?m=aY0NiO6%2B%2Fg7EKFhAM05ANCEixGQzvysi7xsmIGFMZiClHNnfM16f22GF%2Bq2KofvggaDE2m9Jwg1cx1XO3VMFJEsWV7jP9FcHSXqorC7QSf032rn%2BkmKLqpG41FRk%3D" data-url="http://mse.360.cn" target="_blank" id="haosougw">360浏览器客户端官网</a>
+    |<a href="http://www.so.com/link?m=asNbEHeNYk%2ByTZYScbSgzl%2BGRIzokP6OvvMDidOHm6H6VVKEr%2BSI1BRZWwLC3bSSIiI9JOQd9LsF0QoSqbrcD5RsmrARNkDrdp1Wbz9UBfRlDIUmU3oQ4rFDYeRknZpAGeagiEQcgv0X9qZdcEGNGfXcQSW7hTglaOPjK0Q%3D%3D" data-url="http://info.so.com/feedback.html?src=anniu" target="_blank">意见反馈</a>
+    |<a href="http://www.so.com/link?m=abzy4TaPtkQPFdkjIdkk6IrdiGCvRWbEkjrWbwJ7zWstgc6ERKPHtAyWkjj6ilg8k3yLd5akRdPHXJRgV09xECt43lyxi4KUBuOH0sQ7N1ioVqURbALpjqAsbtkiIeINjKOR7kzGpDjQGhHYBkgIalEi%2FUxHnH7cuQvgF0A%3D%3D" data-url="http://info.so.com/web_report.html?src=report" target="_blank">违法举报</a>
+    |<a href="http://www.so.com/link?m=ayNSeNBFBsNcpTaEsgZORBFi0Pl52EX8Ks1QiEQyQrl0Xcdp49dF730ZvYrp92aXccElBDUmbijnNEH4zo1%2BvuF0lcri7ECQZYTch4QsrtODbQH4GvsXGbma0qXdgZWxUgzu36slXxSnYCsj0w%2Bh1bLMb3bI%3D" data-url="http://bbs.360safe.com/forum-137-1.html" target="_blank">产品论坛</a>
+    |<a href="http://www.so.com/link?m=a%2FJnGwLC1B33Z7PzsAeoml2ELoGGFkpOMs7fyipfcS7V4trPrskWIXvk6Nh7PrJY56jum%2FVpyyt9%2BeJhos5N4I3eXVZ0etoxTAWahKr212O14DdKYvJGpbFyaqhjEg4PI1HTDxO55saT0LIHVM9TVUQ%3D%3D" data-url="http://info.so.com/site_submit.html" target="_blank">网站收录</a>
+    |<a href="http://www.so.com/link?m=a1yoGwS9MoyUmgn3sf8CIbOgi4cFrrz%2Bmumzu1x1Oe9mkP1v19u%2BDipYMXVAUkbFiRB3Inwyu8LI6t4iwlIRa1iOWJ4zKS0P9v379Wr873OpV3k7AnNK9F0mdTSFbJ7VZBKsfWkCe82irrVLRZERXWobUUtQ%3D" data-url="http://www.so.com/help/help_1_1.html" target="_blank">使用帮助</a>
+    |<a href="http://www.so.com/link?m=a9hk3%2FoFW9GLczKlohaS%2B60aPdHdFLg3QAqa0eyFUIekbBdVTqnvh95jysaWaio2fRTnKs%2F9LS0xUhhBwPaoS4tl6UeyGSvasdx41wULJqLzrmPYwUWiiDST2XEQsrotP3oBshbT9M%2Bdv%2FwE8" data-url="http://e.360.cn/?src=srp465" target="_blank">推广合作</a>
+    |<a href="javascript:void(0);" id="weixinlk">官方微信<span></span></a>
+    |<a href="http://www.so.com/link?m=ajr95m3FBGUqG5KsxWN6S0HpFHPrhgPQnGC5YkdeEoqxkb52ISZ9f2oAMag6KdCZ%2BJjLOdKkXJt8aKAfemICCk%2B0AR6n7fPBKbvrqAVtiuDiHcQ%2BhgXnrXPSQB0njF021" data-url="http://zhanzhang.so.com" target="_blank">站长平台</a>
+    <p><span>Copyright &copy; 360.CN 奇虎360旗下搜索服务</span></p> 
+            </div>
+        </div>
+</div>
+</body>
+</html>
